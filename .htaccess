@@ -1,0 +1,3 @@
+RewriteEngine On
+
+RewriteRule ^credits\.html$  ?control=c_credits
