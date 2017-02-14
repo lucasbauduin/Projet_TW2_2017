@@ -19,7 +19,7 @@ function compareCommune($i, $j) {
 }
 
 function compareNom($i, $j) {
-  return strcmp($i->fields->nom, $j->fields->nom);
+  return strcmp(preg_replace('/\-?\d+/', '', $i->fields->nom), preg_replace('/\-?\d+/', '', $j->fields->nom));
 }
 
 function getStations($sortby = "commune") {
