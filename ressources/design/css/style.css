@@ -144,15 +144,16 @@ div#formblock header h2 {
   padding: 5px 0 2px;
 }
 
+section#form p {
+  font-size: .8rem;
+  text-align: center;
+  margin: 12px;
+}
+
+
 footer#foot {
   width: 990px;
   background: #eeeeee;
-}
-
-footer#foot p {
-  font-size: .8rem;
-  text-align: center;
-  margin: 0 0 19px;
 }
 
 footer#foot div#logofoot {

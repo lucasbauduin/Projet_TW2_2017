@@ -14,9 +14,13 @@ switch ($control) {
     $control = "controllers/c_credits.php";
     break;
 
+  case 'c_stationInfo':
+    $control = "controllers/c_station.php";
+    break;
+
   default:
     $pageTitle = "Oops, il y a un problème !";
-    $control = "controllers/c_error.php";
+    $control = "controllers/c_errors.php";
     break;
 }
 

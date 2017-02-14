@@ -1,3 +1,4 @@
 RewriteEngine On
 
 RewriteRule ^credits\.html$  ?control=c_credits
+RewriteRule ^station-([0-9]+)\.html$  ?control=c_stationInfo&station=$1
