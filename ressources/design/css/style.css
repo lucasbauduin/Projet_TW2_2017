@@ -15,7 +15,7 @@ body {
 }
 
 body a {
-  color : #bd0070;
+  color : #990033;
   text-decoration: none;
 }
 
@@ -46,7 +46,7 @@ div.content ul {
 }
 
 div.content ul li {
-	color: #bd0070;
+	color: #990033;
 }
 
 div.content ul li span {
@@ -56,7 +56,7 @@ div.content ul li span {
 header#head {
   width: 100%;
   height: 142px;
-  background: #bd0070;
+  background: #990033;
 }
 
 header#head div#logohead {
@@ -69,17 +69,22 @@ header#head div#logohead {
 }
 
 header h1.pageTitle {
+  color: #777;
   font-size: 2.5rem;
   font-weight: 300;
   text-align: center;
   padding: 0 0 12px;
 }
 
+header h1.pageTitle::first-letter {
+  color: #990033;
+}
+
 section div.content #map {
   width: 100%;
   height: 360px;
   margin: 0 auto 12px;
-  background: #bd0070;
+  background: #990033;
 }
 
 section#stationsList {
@@ -89,8 +94,9 @@ section#stationsList {
 
 section#stationsList article {
   width: 100%;
-  border: 1px solid #bd0070;
-  margin: 0 0 12px;
+  border-top: 2px solid #990033;
+  margin: 12px 0 12px;
+  padding: 24px 0 0;
 }
 
 section#stationsList article:last-child {
@@ -98,17 +104,23 @@ section#stationsList article:last-child {
 }
 
 section#stationsList article div.content {
-  padding: 6px;
+  padding: 8px;
 }
 
 section#stationsList article h3.stationName {
-  color: #bd0070;
+  color: #990033;
   text-transform: uppercase;
   font-weight: bold;
 }
 
-section#stationsList article em.localisation {
+section#stationsList article p.localisation {
   color: #777777;
+  text-transform: lowercase;
+  font-style: italic;
+}
+
+section#stationsList article p.localisation::first-letter {
+  text-transform: uppercase;
 }
 
 section#form {
@@ -126,7 +138,7 @@ section#form div.content {
 
 div#formblock {
   width: 100%;
-  background: #bd0070;
+  background: #990033;
   position: relative;
   padding: 0 0 6px;
   text-align: center;

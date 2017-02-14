@@ -9,6 +9,7 @@
       <link href="https://fonts.googleapis.com/css?family=Yantramanav:300,400" rel="stylesheet">
       <script src="https://unpkg.com/leaflet@1.0.3/dist/leaflet.js"></script>
       <script src="ressources/javascript/scripts.js"></script>
+      <script src="ressources/javascript/scriptCarte.js"></script>
     </head>
     <body>
       <header id="head">

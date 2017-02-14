@@ -1,7 +1,10 @@
 <?php
 $projectName = "V'liVe";
+require 'models/m_stations.php';
 
 $control = isset($_GET['control']) ? (string) $_GET['control'] : "c_home";
+$idstation = isset($_GET['station']) ? (int) $_GET['station'] : null;
+$sortby = isset($_GET['sortby']) ? (string) $_GET['sortby'] : null;
 
 switch ($control) {
   case 'c_home':
@@ -15,6 +18,8 @@ switch ($control) {
     break;
 
   case 'c_stationInfo':
+    $theSation = getTheStation($idstation);
+    $pageTitle = preg_replace('/\-?\d+/', '', $theSation->fields->nom);
     $control = "controllers/c_station.php";
     break;
 

@@ -1,4 +1,3 @@
 <?php
-require 'models/m_stations.php';
-$stations = getStations();
+$stations = getStations($sortby);
 require 'views/v_home.php';

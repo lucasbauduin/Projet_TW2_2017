@@ -14,10 +14,38 @@ $configContext = array(
 stream_context_set_default($configContext);
 */
 
-function getStations() {
+function compareCommune($i, $j) {
+  return strcmp($i->fields->commune, $j->fields->commune);
+}
+
+function compareNom($i, $j) {
+  return strcmp($i->fields->nom, $j->fields->nom);
+}
+
+function getStations($sortby = "commune") {
   $data = file_get_contents("https://opendata.lillemetropole.fr/api/records/1.0/search/?dataset=vlille-realtime&rows=250&timezone=Europe/Paris");
   $stations = json_decode($data);
-  return $stations->records;
+  $availableStations = array();
+
+  foreach ($stations->records as $aStation) { // On ne garde que les station noté "EN SERVICE"
+    if($aStation->fields->etat == "EN SERVICE") {
+      $availableStations[] = $aStation;
+    }
+  }
+
+  switch ($sortby) { // On effectue un tri en fonction de l'argument passé en parametre
+    case 'commune':
+      usort($availableStations, "compareCommune");
+      break;
+
+    case 'nom':
+      usort($availableStations, "compareNom");
+      break;
+
+    default:
+      break;
+  }
+  return $availableStations;
 }
 
 function getTheStation($id) {
