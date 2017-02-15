@@ -2,5 +2,6 @@ RewriteEngine On
 
 RewriteRule ^credits\.html$  ?control=c_credits
 RewriteRule ^index\.html$  ?control=c_home&sortby=nom
+RewriteRule ^/$  ?control=c_home&sortby=nom
 RewriteRule ^tri-([a-z0-9\-]+)\.html$  ?control=c_home&sortby=$1
 RewriteRule ^station-([0-9]+)\.html$  ?control=c_stationInfo&station=$1

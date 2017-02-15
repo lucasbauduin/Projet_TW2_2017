@@ -18,7 +18,7 @@
 <section id="form">
   <div id="formblock">
     <header><h2>Filtres</h2></header>
-    <select id="sort" name="sort"  onclick="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
+    <select id="sort" name="sort"  onchange="this.options[this.selectedIndex].value && (window.location = this.options[this.selectedIndex].value);">
       <option value="tri-nom.html" <?php if($sortby == "nom") { echo 'selected="selected"'; } ?>>Tri en fonction du nom</option>
       <option value="tri-commune.html" <?php if($sortby == "commune") { echo 'selected="selected"'; } ?>>Tri en fonction de la commune</option>
     </select>

@@ -4,7 +4,7 @@ require 'models/m_stations.php';
 
 $control = isset($_GET['control']) ? (string) $_GET['control'] : "c_home";
 $idstation = isset($_GET['station']) ? (int) $_GET['station'] : null;
-$sortby = isset($_GET['sortby']) ? (string) $_GET['sortby'] : null;
+$sortby = isset($_GET['sortby']) ? (string) $_GET['sortby'] : "nom";
 
 switch ($control) {
   case 'c_home':
