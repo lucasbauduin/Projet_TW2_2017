@@ -11,7 +11,7 @@
       <script src="ressources/javascript/scripts.js"></script>
       <script src="ressources/javascript/scriptCarte.js"></script>
     </head>
-    <body>
+    <body onload="load();">
       <header id="head">
         <a href="./" title="Accueil"><div id="logohead"></div></a>
       </header>
