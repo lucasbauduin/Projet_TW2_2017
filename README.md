@@ -19,7 +19,6 @@ Les contrôleurs c_home.php et c_station.php récupère les données du web serv
 
 Dans le fichier /ressources/javascript/script.js :
 - À l'aide de document.getElementsByClass("sation"), récuprer toutes les balises <article> qui sont des éléments de la liste de stations.
-- Effectuer une copie de ce tableau.
 - Masquer les éléments de la liste.
 - Creer les fonctions de qui permetteront de trier sur le nom des stations et le nom des communes :
   -- Lors de la pression d'une touche de clavier dans les différent champs de texte, executer les fonctions correspondantes
