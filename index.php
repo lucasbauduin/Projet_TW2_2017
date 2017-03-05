@@ -18,8 +18,8 @@ switch ($control) {
     break;
 
   case 'c_stationInfo':
-    $theSation = getTheStation($idstation);
-    $pageTitle = preg_replace('/\-?\d+/', '', $theSation->fields->nom);
+    $theStation = getTheStation($idstation);
+    $pageTitle = preg_replace('/\-?\d+/', '', $theStation->fields->nom);
     $control = "controllers/c_station.php";
     break;
 
